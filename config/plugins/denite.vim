@@ -64,7 +64,7 @@ call denite#custom#source(
 if executable('ag')
 	" The Silver Searcher
 	call denite#custom#var('file/rec', 'command',
-		\ ['ag', '-U', '--hidden', '--follow', '--nocolor', '--nogroup', '-g', ''])
+		\ ['ag', '--hidden', '--follow', '--nocolor', '--nogroup', '-g', ''])
 
 	" Setup ignore patterns in your .agignore file!
 	" https://github.com/ggreer/the_silver_searcher/wiki/Advanced-Usage
@@ -75,7 +75,7 @@ if executable('ag')
 	call denite#custom#var('grep', 'separator', ['--'])
 	call denite#custom#var('grep', 'final_opts', [])
 	call denite#custom#var('grep', 'default_opts',
-		\ [ '--skip-vcs-ignores', '--vimgrep', '--smart-case', '--hidden' ])
+		\ [ '--vimgrep', '--smart-case', '--hidden' ])
 
 elseif executable('rg')
 	" Ripgrep
