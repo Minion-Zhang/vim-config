@@ -11,3 +11,13 @@
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#tagbar#enabled = 1
     let g:airline_skip_empty_sections = 1
+
+# Replace vim-indent-guides with indentLine
+#   Note:
+#     1) "conceal" feature should be enabled in VIM.
+#     2)  candidate: │ ┃ ┆ ┇ ┊ ┋ ╎ ╏, or using `let g:indentLine_char_list = ['|', '¦', '┆', '┊']`
+- { repo: nathanaelkane/vim-indent-guides, if: 0 }
+- repo: Yggdroot/indentLine
+  hook_add: |
+    let g:indentLine_enabled = 1
+    let g:indentLine_char = '¦'
